@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<!-- 引入组件库 -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<el-container>
+				<el-aside width="200px">
+					<p>flex-direction:在主轴的方向</p>
+					<p>flex-wrap: 主轴一排排不下，如何换行</p>
+					<p>flex-flow：flex-direction与flex-wrap简写</p>
+					<p>justify-content：在主轴对齐方式</p>
+					<p>align-items： 在交叉对齐方式</p>
+					<p>align-content：多条轴线对齐方式</p>
+				</el-aside>
+				<el-container>
+					<el-header>Flex布局</el-header>
+					<el-main>
+						<div class="card-box">
+							<div class="box">
+								<div class="box-item">
+									话题名
+								</div>
+								<div class="box-text">
+									CUSTOM_RAWDATA_TRACE
+								</div>
+							</div>
+							<div class="box">
+								<div class="box-item">
+									每分钟负载
+								</div>
+								<div class="box-text">
+									0
+								</div>
+							</div>
+							<div class="box">
+								<div class="box-item">
+									接入方式
+								</div>
+								<div class="box-text">
+									UDP
+								</div>
+							</div>
+							<div class="box">
+								<div class="box-item">
+									话题名
+								</div>
+								<div class="box-text">
+									CUSTOM_RAWDATA_TRACE
+								</div>
+							</div>
+							<div class="box">
+								<div class="box-item">
+									每分钟负载
+								</div>
+								<div class="box-text">
+									0
+								</div>
+							</div>
+							<div class="box">
+								<div class="box-item">
+									接入方式
+								</div>
+								<div class="box-text">
+									UDP
+								</div>
+							</div>
+						</div>
+					</el-main>
+					<el-footer>参考文章<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">阮一峰：flex布局</a></el-footer>
+				</el-container>
+			</el-container>
+		</div>
+	</body>
+	<style>
+		.card-box {
+			display: flex;
+			/*从左到由排列*/
+			flex-direction: row;
+			/*换行*/
+			flex-wrap: wrap;
+			width: 40%;
+		}
+
+		.box {
+			margin: 0 5px;
+			flex-grow:1;
+		}
+
+		.box .box-item {
+			color: #666;
+		}
+
+		.box .box-text {}
+	</style>
+	<script>
+		new Vue({
+			el: '#app'
+		})
+	</script>
+</html>
